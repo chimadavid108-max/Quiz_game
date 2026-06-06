@@ -1,20 +1,20 @@
 # Quiz Game
  
-A simple mathematics quiz game that lets players answer questions and saves their scores for future sessions.
+**A simple mathematics quiz game that lets players answer questions and saves their scores for future sessions.**
  
 ## Features 
  
 - *Math questions*
  
-- Score tracking
+- *Score tracking*
  
-- Automatic score saving
+- *Automatic score saving*
  
-- Easy to play 
+- *Easy to play*
 
 ## How to Run
- ```bash
-    `python quiz_game.py`
+ ```
+    python quiz_game.py
  ```
 
 ## Author
