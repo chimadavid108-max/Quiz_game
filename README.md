@@ -15,7 +15,7 @@ A simple mathematics quiz game that lets players answer questions and saves thei
 ## How to Run
  `python quiz_game.py ` 
 
-##Author
+#Author
 
 David Chima
 
