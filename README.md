@@ -4,7 +4,7 @@ A simple mathematics quiz game that lets players answer questions and saves thei
  
 ## Features 
  
-- Math questions
+- *Math questions*
  
 - Score tracking
  
@@ -13,8 +13,8 @@ A simple mathematics quiz game that lets players answer questions and saves thei
 - Easy to play 
 
 ## How to Run
- ```
-    python quiz_game.py
+ ```bash
+    `python quiz_game.py`
  ```
 
 ## Author
