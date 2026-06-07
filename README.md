@@ -20,7 +20,7 @@
 ## Author
 
 **David Chima**
-```
+
 extractor_tool/
 ├── main.py
 ├── config.py
@@ -32,4 +32,4 @@ extractor_tool/
 └── ui/
     ├── display.py
     └── cli.py
-```
+
