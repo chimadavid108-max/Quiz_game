@@ -20,16 +20,3 @@
 ## Author
 
 **David Chima**
-
-extractor_tool/
-├── main.py
-├── config.py
-├── exceptions.py
-├── core/
-│   ├── email_extractor.py
-│   ├── phone_extractor.py
-│   └── storage.py
-└── ui/
-    ├── display.py
-    └── cli.py
-
