@@ -1,5 +1,6 @@
 import random
 
+
 def get_questions(difficulty):
     questions = {}
     difficulty = difficulty.strip().lower()
@@ -38,9 +39,6 @@ def get_questions(difficulty):
 
         q = f"{num1} {op} {num2}"
 
-        questions[i] = {
-            "question": q,
-            "answer": ans
-        }
+        questions[i] = {"question": q, "answer": ans}
 
     return questions

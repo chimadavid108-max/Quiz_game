@@ -3,23 +3,27 @@ import datetime
 from questions import get_questions as gq
 from score import save_score as ss
 
-#---------------------------------------------
+
+# ---------------------------------------------
 # UI HELPERS
-#---------------------------------------------
+# ---------------------------------------------
 def clear_screen():
-    os.system('cls' if os.name == 'nt' else 'clear')
+    os.system("cls" if os.name == "nt" else "clear")
+
 
 def line():
     return "-" * 42
+
 
 def title(text):
     print(line())
     print(text.center(40))
     print(line())
 
-#---------------------------------------------
+
+# ---------------------------------------------
 # MAIN PROGRAM
-#---------------------------------------------
+# ---------------------------------------------
 def quiz_app():
     while True:
         clear_screen()
@@ -35,9 +39,9 @@ def quiz_app():
 
         op = input("Select option: ").strip()
 
-#---------------------------------------------
-# START GAME
-#---------------------------------------------
+        # ---------------------------------------------
+        # START GAME
+        # ---------------------------------------------
         if op == "1":
             clear_screen()
             title("NEW GAME")
@@ -56,7 +60,7 @@ def quiz_app():
             clear_screen()
             title(f"{difficulty.upper()} MODE")
 
-#---------------------------------------------
+            # ---------------------------------------------
             # Game loop
             for key, value in qs.items():
                 print(f"\nQ{key}: {value['question']}")
@@ -64,7 +68,7 @@ def quiz_app():
                 ans = input("Your answer: ").strip()
 
                 try:
-                    if float(ans) == float(value['answer']):
+                    if float(ans) == float(value["answer"]):
                         print("✅ Correct\n")
                         score += 10
                     else:
@@ -72,7 +76,7 @@ def quiz_app():
                 except ValueError:
                     print("❌ Invalid input! Counted as wrong.\n")
 
-#---------------------------------------------
+            # ---------------------------------------------
             # Save score
             now = datetime.datetime.now().strftime("%d %B %Y")
             ss(now, f"{score}")
@@ -83,9 +87,9 @@ def quiz_app():
 
             input("\nPress Enter to continue...")
 
-#---------------------------------------------
-# VIEW SCORES
-#---------------------------------------------
+        # ---------------------------------------------
+        # VIEW SCORES
+        # ---------------------------------------------
         elif op == "2":
             clear_screen()
             title("SCORE HISTORY")
@@ -98,9 +102,9 @@ def quiz_app():
 
             input("\nPress Enter to continue...")
 
-#---------------------------------------------
-# CLEAR SCORES
-#---------------------------------------------
+        # ---------------------------------------------
+        # CLEAR SCORES
+        # ---------------------------------------------
         elif op == "3":
             confirm = input("Clear all scores? (yes/no): ").lower()
 
@@ -111,9 +115,9 @@ def quiz_app():
 
             input("\nPress Enter to continue...")
 
-#---------------------------------------------
-# HOW TO PLAY
-#---------------------------------------------
+        # ---------------------------------------------
+        # HOW TO PLAY
+        # ---------------------------------------------
         elif op == "4":
             clear_screen()
             title("HOW TO PLAY")
@@ -127,9 +131,9 @@ def quiz_app():
 
             input("\nPress Enter to continue...")
 
-#---------------------------------------------
-# EXIT
-#---------------------------------------------
+        # ---------------------------------------------
+        # EXIT
+        # ---------------------------------------------
         elif op == "5":
             print("\n👋 Goodbye!")
             break
@@ -137,6 +141,7 @@ def quiz_app():
         else:
             print("❌ Invalid option")
             input("Press Enter...")
+
 
 if __name__ == "__main__":
     quiz_app()
